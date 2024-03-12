@@ -4,15 +4,20 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
+import type {Metadata} from 'next'
+export const metadata: Metadata = {
+  title: "Register",
+  description: "Register an account with Techie.io to get the latest news and updates",
+};
 function Register() {
   return (
     <div className="flex flex-col-reverse md:flex-row">
       
 
 
-           <div className='mt-0 md:mt-8 md:w-7/12'>
+           <div className='mt-0 md:mt-5 md:w-7/12'>
               <div className="relative flex justify-center items-center">
-                  <div className="absolute top-20 p-20">  
+                  <div className="absolute top-20 p-28 ml-10">  
                     <Image className='' src={SignUpSvg} width='1024' height='768' alt='signup blob'></Image>
                   </div>
 
@@ -24,7 +29,7 @@ function Register() {
            </div>
 
 
-          <div className="w-full md:w-5/12">
+          <div className="w-full md:w-5/12 md:mt-10">
               <div className="bg-creamywhite m-10 p-7 rounded-2xl space-y-2">
                   <div className="space-y-2">
                       <h1 className='font-bold text-secondarycolor text-2xl'>Register 😃</h1>
@@ -64,7 +69,7 @@ function Register() {
                       <Input type="email" placeholder="Email" className='rounded-full'></Input>
                       <Input type="password" placeholder="********" className='rounded-full'></Input>
                       <Input type="password" placeholder="********" className='rounded-full'></Input>
-                      <p><Link href='/login' className='hover:text-accentcolor'>Have an Account?</Link></p>
+                      <p><Link href='/auth/login' className='hover:text-accentcolor'>Have an Account?</Link></p>
                       <Button variant='socials' className='w-full'>Register</Button>
                     </form>
                   </div>

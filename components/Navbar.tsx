@@ -9,8 +9,11 @@ import { FiSearch } from "react-icons/fi";
 import { useState } from 'react';
 import { FaBullseye } from 'react-icons/fa';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
+const pathname = usePathname()
+
 const [showSearch,setShowSearch]=useState(false)
 const OnClick = ()=>{
     showSearch === false ? setShowSearch(true):setShowSearch(false)
@@ -21,7 +24,7 @@ const OnClick = ()=>{
     <div className=''>
         <div className="bg-creamywhite p-2 m-4 rounded-full flex items-center justify-between pl-8 pr-8 drop-shadow-md">
             <div className="">
-                <h1 className={`text-[#F7931A] ${poppins.className} text-lg tracking-widest`}>Techie.io</h1>
+                <h1 className={`text-[#F7931A] ${poppins.className} text-lg tracking-widest`}><Link href="/">Techie.io</Link></h1>
             </div>
 
             <div className={`space-x-3 font-medium text-secondarycolor hidden md:block`}>
@@ -43,7 +46,7 @@ const OnClick = ()=>{
             
 
             <div className="hidden md:block">
-                <Button variant="accent"><Link href="/auth/login">Sign in</Link></Button>
+                <Button variant="accent"><Link href={pathname == "/auth/login"?"/auth/register":"/auth/login"}>{pathname == "/auth/login"?"sign up":"sign in"}</Link></Button>
 
             </div>
             <div className="md:hidden flex items-center justify-center">
