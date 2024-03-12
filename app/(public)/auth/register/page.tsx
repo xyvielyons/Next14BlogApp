@@ -30,7 +30,7 @@ function Register() {
 
 
           <div className="w-full md:w-5/12 md:mt-10">
-              <div className="bg-creamywhite m-10 p-7 rounded-2xl space-y-2">
+              <div className="bg-creamywhite m-10 p-7 rounded-2xl space-y-2 shadow-md">
                   <div className="space-y-2">
                       <h1 className='font-bold text-secondarycolor text-2xl'>Register 😃</h1>
                       <p>Please complete the form below to create an account</p>
@@ -67,8 +67,8 @@ function Register() {
                       <Input type="text" placeholder="First Name" className='rounded-full'></Input>
                       <Input type="text" placeholder="Last Name" className='rounded-full'></Input>
                       <Input type="email" placeholder="Email" className='rounded-full'></Input>
-                      <Input type="password" placeholder="********" className='rounded-full'></Input>
-                      <Input type="password" placeholder="********" className='rounded-full'></Input>
+                      <Input type="password" placeholder="password" className='rounded-full'></Input>
+                      <Input type="password" placeholder="confirm password" className='rounded-full'></Input>
                       <p><Link href='/auth/login' className='hover:text-accentcolor'>Have an Account?</Link></p>
                       <Button variant='socials' className='w-full'>Register</Button>
                     </form>

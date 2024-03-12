@@ -30,7 +30,10 @@ function Login() {
 
 
           <div className="w-full md:w-5/12 md:mt-10">
-              <div className="bg-creamywhite m-10 p-7 rounded-2xl space-y-2">
+              <div className="bg-creamywhite m-10 p-7 rounded-2xl space-y-2 
+
+shadow-md
+">
                   <div className="space-y-2">
                       <h1 className='font-bold text-secondarycolor text-2xl'>Login ✌️</h1>
                       <p>Please complete the form below to create an account</p>
@@ -66,7 +69,7 @@ function Login() {
                     <form className='space-y-2'>
                       <Input type="email" placeholder="Email" className='rounded-full'></Input>
                       <Input type="password" placeholder="********" className='rounded-full'></Input>
-                      <p><Link href='' className='hover:text-accentcolor'>Forgot password?</Link></p>
+                      <p><Link href='/auth/forgotpassword' className='hover:text-accentcolor'>Forgot password?</Link></p>
                       <Button variant='socials' className='w-full'>Login</Button>
 
                     </form>

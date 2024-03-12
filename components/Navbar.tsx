@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FiSearch } from "react-icons/fi";
 import { useState } from 'react';
-import { FaBullseye } from 'react-icons/fa';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation'
 
@@ -46,7 +45,7 @@ const OnClick = ()=>{
             
 
             <div className="hidden md:block">
-                <Button variant="accent"><Link href={pathname == "/auth/login"?"/auth/register":"/auth/login"}>{pathname == "/auth/login"?"sign up":"sign in"}</Link></Button>
+                <Button className='shadow-md' variant="accent"><Link href={pathname == "/auth/login"?"/auth/register":"/auth/login"}>{pathname == "/auth/login"?"sign up":"sign in"}</Link></Button>
 
             </div>
             <div className="md:hidden flex items-center justify-center">
