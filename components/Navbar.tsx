@@ -21,11 +21,11 @@ const OnClick = ()=>{
     <div className=''>
         <div className="bg-creamywhite p-2 m-4 rounded-full flex items-center justify-between pl-8 pr-8 drop-shadow-md">
             <div className="">
-                <h1 className={`text-[#F7931A] ${poppins.className} text-lg tracking-widest`}>Tech Tonic</h1>
+                <h1 className={`text-[#F7931A] ${poppins.className} text-lg tracking-widest`}>Techie.io</h1>
             </div>
 
             <div className={`space-x-3 font-medium text-secondarycolor hidden md:block`}>
-                <Link href="/home" className='hover:text-accentcolor'>Home</Link>
+                <Link href="/" className='hover:text-accentcolor'>Home</Link>
                 <Link href="/blog" className='hover:text-accentcolor'>Blog</Link>
                 <Link href="/about" className='hover:text-accentcolor'>About</Link>
                 <Link href="/dashboard" className='hover:text-accentcolor'>Dashboard</Link>
@@ -43,7 +43,7 @@ const OnClick = ()=>{
             
 
             <div className="hidden md:block">
-                <Button variant="accent">sign in</Button>
+                <Button variant="accent"><Link href="/auth/login">Sign in</Link></Button>
 
             </div>
             <div className="md:hidden flex items-center justify-center">
@@ -55,11 +55,11 @@ const OnClick = ()=>{
         </div>
 
               <div className={cn(
-                "ml-4 mr-4 -translate-y-[40rem] ease-in-out md:hidden",
+                "ml-4 mr-4 -translate-y-[40rem] ease-in-out md:hidden ",
                 `${showSearch == true?'-translate-y-[0rem] ease-in-out':'ease-in-out'}`
               )}>
-                <div className="flex items-center justify-center bg-white rounded-full">
-                    <input type="text" className='bg-white rounded-full p-2 w-full focus:outline-none 'placeholder='search for something.......' />
+                <div className="flex items-center justify-center bg-white rounded-full mb-0">
+                    <input type="text" className='bg-white rounded-full  p-2 w-full focus:outline-none 'placeholder='search for something.......' />
                     <FiSearch className='text-secondarycolor mr-2 text-2xl hover:text-secondarycolor font-extrabold'/>
                 </div>
                 

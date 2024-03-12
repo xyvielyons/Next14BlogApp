@@ -5,12 +5,13 @@ import { cn } from "@/lib/utils";
 
 
 export const metadata: Metadata = {
-  title: "Register",
-  description: "Become a blogger today by registering in our blogging app",
+  title: "Home",
+  description: "see all our latest blogs from our professional writers",
 };
 export default function Home() {
   return (
     <main className="">
+      <div className="">Home</div>
       
     </main>
   );
